@@ -1,0 +1,4 @@
+<collections>
+    <collection collection_no="1" collection_name="erp" id_field_name="_id" ts_field_name="businessDate" collection_status="Pending">erp collection</collection>
+    <collection collection_no="2" collection_name="edit-log" id_field_name="_id" ts_field_name="timeStamp" collection_status="Pending">edit-log collection</collection>
+</collections>

@@ -1,0 +1,13 @@
+version: '3'
+services:
+  myapp:
+    build:
+      context: .  # Build context is the current directory
+      dockerfile: Dockerfile  # Use the Dockerfile named "Dockerfile"
+    volumes:
+      - /archive/logs:/app/logs  # Mount logs
+      - /archive/cred:/app/cred  # env and other credentials files
+      - /archive/config:/app/config # configiguration file
+      - /archive/data:/app/data  # operation database location
+    #environment:
+    #  - GOOGLE_APPLICATION_CREDENTIALS=/app/cred/service-account-key.json  # Add environment variables if needed

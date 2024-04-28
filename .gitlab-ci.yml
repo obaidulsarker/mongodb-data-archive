@@ -1,0 +1,7 @@
+stages:
+  - package
+
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+include:
+  - '/.gitlab/docker-package.yml'

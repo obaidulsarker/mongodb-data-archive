@@ -1,0 +1,30 @@
+<h1 style="color: #5e9ca0;">ESB Database Archiving Job!</h1>
+<p>Dear All,</p>
+<p>Here is the details of the job.</p>
+<p>Job ID : {operation_id}</p>
+<p>Started At: {operation_start_datetime}</p>
+<p>Completed At: {operation_end_datetime}</p>
+<p>Job Status: {operation_status}</p>
+<p>Elapse Duration: {total_duration}</p>
+<p>Archive Completed: {completed_tasks}/{total_task} collections</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<h2 style="color: #2e6c80;">Collection List:</h2>
+<table class="editorDemoTable" style="border-style: solid; float: left; width: 670px; height: 36px;">
+<tbody>
+<tr style="height: 18px;">
+<td style="width: 35.8594px; height: 18px;"><strong>&nbsp;#</strong></td>
+<td style="width: 285.109px; height: 18px;"><strong>Collection</strong></td>
+<td style="width: 132.203px; height: 18px;"><strong>Start Time</strong></td>
+<td style="width: 137.859px; height: 18px;"><strong>Status</strong></td>
+<td style="width: 183.172px; height: 18px;"><strong>Elapse Duration</strong></td>
+</tr>
+{task_list}
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>Note: It is system generated email. No need to reply it.</p>
+<p>&nbsp;</p>
+<p><strong>Regards</strong></p>
+<p><strong>DevOps and Infra Services</strong></p>
+<p><strong>BRAC IT</strong></p>
+<p><strong>&nbsp;</strong></p>
