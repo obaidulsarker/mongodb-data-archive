@@ -1,6 +1,5 @@
 __pycache__
 .venv/
-cred/
 logs/
 test.py
 test2.py
