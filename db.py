@@ -108,14 +108,29 @@ class DatabaseExecutor(Logger):
     def archive_data(self, source_collection, archive_collection, filter_condition):
         try:
             
+            # print(f"filter_condition : {filter_condition}")
+            # self.log_info(f"filter_condition : {filter_condition}")
+
             # Fetch data
             data = source_collection.find(filter_condition)
 
-            # Insert batch into destination collection
-            result =  archive_collection.insert_many(data)
+            cnt = len(list(data))
+            # print(f"Count : {cnt}")
 
-            print(f"Archived {result.record} records.")
-            self.log_info(f"Archived {result.record} records.")
+            if cnt>0: # Check empty document
+                
+                try:
+                    # Insert batch into destination collection
+                    result =  archive_collection.insert_many(data, ordered=False)
+
+                    total_records_inserted = len(result.inserted_ids)
+
+                    print(f"Archived {total_records_inserted} records.")
+                    self.log_info(f"Archived {total_records_inserted} records.")
+                
+                except Exception as e:
+                    print(f"Error: {e}")
+                    self.log_error(f"Exception: {str(e)}")
 
             return True
         
